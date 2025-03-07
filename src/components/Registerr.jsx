@@ -7,6 +7,8 @@ function Registerr() {
         <input type="text" />
         <label htmlFor="">Correo</label>
         <input type="text" />
+        <label htmlFor="">Correo</label>
+        <input type="text" />
     </div>
   )
 }
