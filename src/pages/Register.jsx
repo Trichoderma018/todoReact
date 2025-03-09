@@ -1,12 +1,12 @@
 import React from 'react'
 import Registerr from '../components/Registerr'
 
-function Home() {
+function Register() {
   return (
     <div>
-        
+        <Registerr/>
     </div>
   )
 }
 
-export default Home
+export default Register
