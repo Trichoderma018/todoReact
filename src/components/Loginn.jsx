@@ -10,6 +10,7 @@ function Loginn() {
         <input type="text" />
         <label htmlFor="">Contraseña</label>
         <input type="password" />
+        <button>Iniciar Sesion</button>
       </div>
     </div>
   )
