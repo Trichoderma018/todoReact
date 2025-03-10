@@ -4,12 +4,18 @@ import llamados from '../services/llamados'
 import '../styles/Register.css'
 
 function Registerr() {
-  const [nombreUsuario,SetNombreUsuario]=useState()
-  const [correoUsuario,SetCorreoUsuario]=useState()
-  const [contraUsuario,SetContraUsuario]=useState()
+  const [nombreUsuario,SetNombreUsuario]=useState("")
+  const [correoUsuario,SetCorreoUsuario]=useState("")
+  const [contraUsuario,SetContraUsuario]=useState("")
 
   function cargar() {
-    llamados.PostUsers(nombreUsuario,correoUsuario,contraUsuario)
+    let usuario = {
+      "nombre":nombreUsuario,
+      "correo":correoUsuario,
+      "contrasena":contraUsuario
+    }
+
+    llamados.PostData(usuario,"users")
   }
   function contrasena(evento) {
     SetContraUsuario(evento.target.value)

@@ -1,10 +1,10 @@
 import React from 'react'
-import Registerr from '../components/Registerr'
+import ToDo from '../components/ToDo'
 
 function Home() {
   return (
     <div>
-        
+        <ToDo />
     </div>
   )
 }

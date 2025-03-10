@@ -1,4 +1,22 @@
 {
   "users": [
+    {
+      "id": "a4d9",
+      "nombre": "JP",
+      "correo": "jp@gmail.com",
+      "contrasena": "1234"
+    },
+    {
+      "id": "e5be",
+      "nombre": "Pablo",
+      "correo": "pablo@gmail.com",
+      "contrasena": "1234"
+    },
+    {
+      "id": "7078",
+      "nombre": "Dato",
+      "correo": "dato@gmail.com",
+      "contrasena": "miau"
+    }
   ]
 }
