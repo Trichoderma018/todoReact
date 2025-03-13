@@ -15,7 +15,9 @@ function Registerr() {
       "contrasena":contraUsuario
     }
 
-    llamados.PostData(usuario,"users")
+    llamados.PostData(usuario, 'users')
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
   }
   function contrasena(evento) {
     SetContraUsuario(evento.target.value)

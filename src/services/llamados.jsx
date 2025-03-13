@@ -19,14 +19,14 @@ async function GetData(endpoint) {
 }
 
 
-async function PostData(usuario,endpoint) {
+async function PostData(data,endpoint) {
     try {
         const response = await fetch(`http://localhost:3000/${endpoint}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(usuario)
+            body: JSON.stringify(data)
         });
 
         if (!response.ok) {
@@ -40,14 +40,14 @@ async function PostData(usuario,endpoint) {
     }
 }
 
-async function UpdateData(usuario,endpoint, id) {
+async function UpdateData(data,endpoint, id) {
     try {
         const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(usuario)
+            body: JSON.stringify(data)
         });
 
         if (!response.ok) {

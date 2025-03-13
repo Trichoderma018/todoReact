@@ -17,6 +17,24 @@
       "nombre": "Dato",
       "correo": "dato@gmail.com",
       "contrasena": "miau"
+    },
+    {
+      "id": "6a80",
+      "nombre": "Jessica",
+      "correo": "jess@gmail.com",
+      "contrasena": "1234"
+    },
+    {
+      "id": "e37a",
+      "nombre": "Dato",
+      "correo": "gato@gamil.com",
+      "contrasena": "miau"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "639d",
+      "tarea": "Rascar al gato"
     }
   ]
 }
