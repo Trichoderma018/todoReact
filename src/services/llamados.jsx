@@ -1,6 +1,6 @@
-async function GetUsers() {
+async function GetData(endpoint) {
     try {
-        const response = await fetch('http://localhost:3000/users', {
+        const response = await fetch(`http://localhost:3000/${endpoint}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,16 +18,18 @@ async function GetUsers() {
     }
 }
 
+<<<<<<< HEAD
 async function PostUsers( ) {
+=======
+async function PostData(usuario,endpoint) {
+>>>>>>> 120f126ad60b7301f040fffb68096ea31581ba33
     try {
-        const userData = { nombre, correo, contrasena};
-
-        const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch(`http://localhost:3000/${endpoint}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(userData)
+            body: JSON.stringify(usuario)
         });
 
         if (!response.ok) {
@@ -41,16 +43,14 @@ async function PostUsers( ) {
     }
 }
 
-async function UpdateUsers(nombre, email,password, id) {
+async function UpdateData(usuario,endpoint, id) {
     try {
-        const userData = {nombre, email,password, id };
-
-        const response = await fetch(`http://localhost:3000/users/${id}`, {
+        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(userData)
+            body: JSON.stringify(usuario)
         });
 
         if (!response.ok) {
@@ -64,9 +64,9 @@ async function UpdateUsers(nombre, email,password, id) {
     }
 }
 
-async function DeleteUser(id) {
+async function DeleteData(endpoint,id) {
     try {
-        const response = await fetch(`http://localhost:3000/users/${id}`, {
+        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, { //Esta bien asi
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -85,4 +85,4 @@ async function DeleteUser(id) {
 }
 
 
-export default { GetUsers, PostUsers, UpdateUsers, DeleteUser };
+export default { GetData, PostData, UpdateData, DeleteData };
