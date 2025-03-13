@@ -18,11 +18,8 @@ async function GetData(endpoint) {
     }
 }
 
-<<<<<<< HEAD
-async function PostUsers( ) {
-=======
+
 async function PostData(usuario,endpoint) {
->>>>>>> 120f126ad60b7301f040fffb68096ea31581ba33
     try {
         const response = await fetch(`http://localhost:3000/${endpoint}`, {
             method: 'POST',
