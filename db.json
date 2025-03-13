@@ -35,6 +35,21 @@
     {
       "id": "639d",
       "tarea": "Rascar al gato"
+    },
+    {
+      "id": "9ba0",
+      "tarea": "Alimentar al gato",
+      "completed": false
+    },
+    {
+      "id": "b9ae",
+      "tarea": "Bañar al gato",
+      "completed": false
+    },
+    {
+      "id": "ff07",
+      "tarea": "Acostar al gato",
+      "completed": false
     }
   ]
 }
