@@ -76,11 +76,6 @@ function ToDo() {
       <ul>
         {tasks.map(task => (
           <li key={task.id} style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
-            <input
-              type="checkbox"
-              checked={task.completed}
-              onChange={() => alternarCompletado(task)}
-            />
             {editarTaskId === task.id ? (
               <input
                 type="text"
@@ -90,6 +85,11 @@ function ToDo() {
             ) : (
               <span>{task.tarea}</span>
             )}
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onChange={() => alternarCompletado(task)}
+            />
             {editarTaskId === task.id ? (
               <button className="guardar" onClick={() => guardarEdicion(task)}>Guardar</button>
             ) : (

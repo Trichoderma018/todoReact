@@ -33,13 +33,8 @@
   ],
   "tasks": [
     {
-      "id": "b9ae",
-      "tarea": "Bañar al gato",
-      "completed": false
-    },
-    {
-      "id": "ff07",
-      "tarea": "Acostar al gato",
+      "id": "6009",
+      "tarea": "Jugar con el gato",
       "completed": false
     }
   ]
