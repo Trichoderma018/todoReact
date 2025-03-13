@@ -18,7 +18,7 @@ async function GetUsers() {
     }
 }
 
-async function PostUsers(nombre, correo, contrasena) {
+async function PostUsers( ) {
     try {
         const userData = { nombre, correo, contrasena};
 
