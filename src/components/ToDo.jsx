@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import llamados from '../services/llamados';
+import './ToDo.css';
 
 function ToDo() {
   const [tareaCreada, setTareaCreada] = useState("");
@@ -37,7 +38,7 @@ function ToDo() {
 
   function alternarCompletado(task) {
     const tareaActualizada = { ...task, completed: !task.completed };
-    llamados.PutData(tareaActualizada, `tasks/${task.id}`)
+    llamados.UpdateData(tareaActualizada, 'tasks', task.id)
       .then(() => obtenerTareas())
       .catch(error => console.error('Error al actualizar tarea:', error));
   }
@@ -49,7 +50,7 @@ function ToDo() {
 
   function guardarEdicion(task) {
     const tareaActualizada = { ...task, tarea: editarTaskTexto };
-    llamados.UpdateData(tareaActualizada, `tasks/${task.id}`)
+    llamados.UpdateData(tareaActualizada, 'tasks', task.id)
       .then(() => {
         obtenerTareas();
         setEditarTaskId(null);
@@ -59,18 +60,18 @@ function ToDo() {
   }
 
   function eliminarTarea(taskId) {
-    llamados.DeleteData(`tasks/${taskId}`)
+    llamados.DeleteData('tasks', taskId)
       .then(() => obtenerTareas())
       .catch(error => console.error('Error al eliminar tarea:', error));
   }
 
   return (
-    <div>
+    <div className="todo-container">
       <div>
         <h1>Lista To-Do</h1>
         <label htmlFor="">Tarea: </label>
         <input value={tareaCreada} onChange={manejarCambio} type="text" />
-        <button onClick={agregarTarea}>Agregar</button>
+        <button className="agregar" onClick={agregarTarea}>Agregar</button>
       </div>
       <ul>
         {tasks.map(task => (
@@ -90,11 +91,11 @@ function ToDo() {
               <span>{task.tarea}</span>
             )}
             {editarTaskId === task.id ? (
-              <button onClick={() => guardarEdicion(task)}>Guardar</button>
+              <button className="guardar" onClick={() => guardarEdicion(task)}>Guardar</button>
             ) : (
-              <button onClick={() => iniciarEdicion(task)}>Editar</button>
+              <button className="editar" onClick={() => iniciarEdicion(task)}>Editar</button>
             )}
-            <button onClick={() => eliminarTarea(task.id)}>Eliminar</button>
+            <button className="eliminar" onClick={() => eliminarTarea(task.id)}>Eliminar</button>
           </li>
         ))}
       </ul>
@@ -103,6 +104,3 @@ function ToDo() {
 }
 
 export default ToDo;
-
-//<button>Editar</button>
-//<button>Eliminar</button>
