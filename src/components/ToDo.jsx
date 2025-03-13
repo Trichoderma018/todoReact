@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import llamados from '../services/llamados';
-import './ToDo.css';
+import '../styles/todo.css'
 
 function ToDo() {
   const [tareaCreada, setTareaCreada] = useState("");

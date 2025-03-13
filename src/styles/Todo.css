@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff, #00ff7f);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Contenedor principal */
+  .todo-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin-top: 20px;
+  }
+  
+  /* Título */
+  .todo-container h1 {
+    color: #333;
+  }
+  
+  /* Entrada de texto */
+  .todo-container input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Botones */
+  .todo-container button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .todo-container button.agregar {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+  }
+  
+  .todo-container button.editar {
+    background-color: #2196F3; /* Azul */
+    color: white;
+  }
+  
+  .todo-container button.guardar {
+    background-color: #FFEB3B; /* Amarillo */
+    color: black;
+  }
+  
+  .todo-container button.eliminar {
+    background-color: #F44336; /* Rojo */
+    color: white;
+  }
+  
+  /* Lista de tareas */
+  .todo-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-container li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .todo-container li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .todo-container li span {
+    flex-grow: 1;
+  }
